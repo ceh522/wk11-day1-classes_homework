@@ -14,15 +14,19 @@ public class WaterBottleTest {
 
     @Test
     public void drink(){
-        assertEquals(90, waterbottle.drink());
+        waterbottle.drink();
+        assertEquals(90, waterbottle.getVolume());
     }
     @Test
     public void empty(){
-        assertEquals(0, waterbottle.empty());
+        waterbottle.empty();
+        assertEquals(0, waterbottle.getVolume());
     }
-
     @Test
     public void fill(){
-        assertEquals(100, waterbottle.fill());
+        waterbottle.fill();
+        assertEquals(100, waterbottle.getVolume());
     }
 }
+
+//updated to make sure checking after action has taken place - checking volume after that point
